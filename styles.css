@@ -13,10 +13,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
     background-color: #51748f;
     border-radius: 4px;
     transition: transform 0.3s ease-in-out;
-    border: solid 1px rgb(255, 255, 255);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .grid_item:hover {
@@ -25,5 +29,18 @@ body {
 }
 
 .grid_container {
-    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: minmax(250px, auto);
+    gap: 20px;
+    padding: 20px;
+    grid-auto-flow: dense;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+.tall {
+    grid-row: span 2;
 }
